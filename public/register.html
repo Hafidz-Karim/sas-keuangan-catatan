@@ -134,7 +134,7 @@
 
 <body>
   <div class="register-container">
-    <h1>Create Your Account</h1>
+    <h1>Silahkan buat akun</h1>
     <form id="register-form">
       <div class="form-group">
         <input type="text" id="username" placeholder="Username" required />
@@ -142,9 +142,9 @@
       <div class="form-group">
         <input type="password" id="password" placeholder="Password" required />
       </div>
-      <button type="submit">Register</button>
+      <button type="submit">Daftar</button>
     </form>
-    <p class="login-link">Already have an account? <a href="/login.html">Login here</a></p>
+    <p class="login-link">Sudah punya akun? <a href="/login.html">Silahkan login</a></p>
   </div>
 
   <script>
@@ -154,13 +154,13 @@
       const password = document.getElementById('password').value;
       
       // Simple validation
-      if (username.length < 4) {
-        alert('Username must be at least 4 characters');
+      if (username.length < 3) {
+        alert('Username harus berisi setidaknya 3 karakter');
         return;
       }
       
       if (password.length < 6) {
-        alert('Password must be at least 6 characters');
+        alert('Password tidak boleh kurang dari 6 karakter');
         return;
       }
       
@@ -178,10 +178,10 @@
         const data = await res.json();
         
         if (res.ok) {
-          alert('Registration successful! Please login.');
+          alert('Registrasi berhasil, Silahkan login');
           location.href = '/login.html';
         } else {
-          alert(data.error || 'Registration failed. Please try again.');
+          alert(data.error || 'Registrasi gagal, Silahkan coba lagi');
         }
       } catch (error) {
         alert('Network error. Please try again.');

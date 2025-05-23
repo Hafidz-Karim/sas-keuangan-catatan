@@ -150,7 +150,7 @@
 
 <body>
   <div class="login-container">
-    <h1>Welcome Back</h1>
+    <h1>Selamat datang</h1>
     <form id="login-form">
       <div class="form-group">
         <input type="text" id="username" placeholder="Username" required />
@@ -158,12 +158,12 @@
       <div class="form-group">
         <input type="password" id="password" placeholder="Password" required />
         <div class="forgot-password">
-          <a href="/forgot-password.html">Forgot password?</a>
+          <a href="/forgot-password.html">Lupa password?</a>
         </div>
       </div>
       <button type="submit">Login</button>
     </form>
-    <p class="register-link">Don't have an account? <a href="/register.html">Register here</a></p>
+    <p class="register-link">Belum punya akun? <a href="/register.html">Silahkan daftar</a></p>
   </div>
 
   <script>
@@ -189,10 +189,10 @@
           // Redirect to dashboard after successful login
           location.href = '/dashboard.html';
         } else {
-          alert(data.error || 'Login failed. Please check your credentials.');
+          alert(data.error || 'Login gagal, Silahkan cek kembali identitas anda');
         }
       } catch (error) {
-        alert('Network error. Please try again.');
+        alert('Network error. Silahkan coba kembali.');
         console.error('Login error:', error);
       } finally {
         button.disabled = false;
